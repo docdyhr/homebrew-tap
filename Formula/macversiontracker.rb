@@ -9,6 +9,7 @@ class Macversiontracker < Formula
 
   depends_on "python@3.12"
 
+  # Core dependencies only - pip will handle transitive dependencies
   resource "pyyaml" do
     url "https://files.pythonhosted.org/packages/54/ed/79a089b6be93607fa5cdaedf301d7dfb23af5f25c398d5ead2525b063e17/pyyaml-6.0.2.tar.gz"
     sha256 "d584d9ec91ad65861cc08d42e834324ef890a082e591037abe114850ff7bbc3e"
@@ -27,11 +28,6 @@ class Macversiontracker < Formula
   resource "tabulate" do
     url "https://files.pythonhosted.org/packages/ec/fe/802052aecb21e3797b8f7902564ab6ea0d60ff8ca23952079064155d1ae1/tabulate-0.9.0.tar.gz"
     sha256 "0095b12bf5966de529c0feb1fa08671671b3368eec77d7ef7ab114be2c068b3c"
-  end
-
-  resource "aiohttp" do
-    url "https://files.pythonhosted.org/packages/54/07/9467d3f8f424dce0b5b92cf48ab95673a52a4bf07b99a2b9f6de747385a7/aiohttp-3.11.11.tar.gz"
-    sha256 "bb49c7f1e6ebf3821a42d81c494f538107610c3a705987f53068546b0e90303e"
   end
 
   def install
