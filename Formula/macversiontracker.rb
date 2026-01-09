@@ -3,13 +3,12 @@ class Macversiontracker < Formula
 
   desc "Track and manage macOS applications installed outside the App Store"
   homepage "https://github.com/docdyhr/versiontracker"
-  url "https://files.pythonhosted.org/packages/a2/fc/1b24fb43e6f832e3a1b12fd1d0d38f33ecdb37faf7e6e071a86e7e7c80df/macversiontracker-0.8.1.tar.gz"
+  url "https://files.pythonhosted.org/packages/65/f4/99a0175726b06fb76f036a9b1627b5c3400a27b23a759035123f1478c4ca/macversiontracker-0.8.1.tar.gz"
   sha256 "079385a465ac4fed5f4952984395ed0379b6fd2d438dca35c6c7ca9e4f95dd1e"
   license "MIT"
 
   depends_on "python@3.12"
 
-  # Core dependencies only - pip will handle transitive dependencies
   resource "pyyaml" do
     url "https://files.pythonhosted.org/packages/54/ed/79a089b6be93607fa5cdaedf301d7dfb23af5f25c398d5ead2525b063e17/pyyaml-6.0.2.tar.gz"
     sha256 "d584d9ec91ad65861cc08d42e834324ef890a082e591037abe114850ff7bbc3e"
