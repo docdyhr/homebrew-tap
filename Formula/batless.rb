@@ -1,5 +1,5 @@
 class Batless < Formula
-  desc "A non-blocking, LLM-friendly code viewer inspired by bat"
+  desc "Non-blocking, LLM-friendly code viewer inspired by bat"
   homepage "https://github.com/docdyhr/batless"
   version "0.6.0"
   license "MIT"
@@ -24,6 +24,25 @@ class Batless < Formula
   end
 
   test do
-    assert_match "batless", shell_output("#{bin}/batless --version")
+    (testpath/"test.rs").write <<~EOS
+      fn main() {
+          println!("Hello, batless!");
+      }
+    EOS
+
+    # Version + help
+    assert_match version.to_s, shell_output("#{bin}/batless --version")
+    assert_match "batless", shell_output("#{bin}/batless --help")
+
+    # Default render
+    assert_match "Hello, batless!", shell_output("#{bin}/batless #{testpath}/test.rs")
+
+    # JSON mode
+    json_output = shell_output("#{bin}/batless --mode=json #{testpath}/test.rs")
+    assert_match '"mode": "json"', json_output
+
+    # Summary mode
+    summary_output = shell_output("#{bin}/batless --mode=summary #{testpath}/test.rs")
+    assert_match "fn main", summary_output
   end
 end
