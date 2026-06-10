@@ -30,19 +30,14 @@ class Batless < Formula
       }
     EOS
 
-    # Version + help
     assert_match version.to_s, shell_output("#{bin}/batless --version")
     assert_match "batless", shell_output("#{bin}/batless --help")
-
-    # Default render
     assert_match "Hello, batless!", shell_output("#{bin}/batless #{testpath}/test.rs")
 
-    # JSON mode (compact output — no spaces around colons)
     json_output = shell_output("#{bin}/batless --mode=json #{testpath}/test.rs")
     assert_match(/"mode":\s*"json"/, json_output)
     assert_match(/"language":\s*"Rust"/, json_output)
 
-    # Summary mode — should mention the main function
     summary_output = shell_output("#{bin}/batless --mode=summary #{testpath}/test.rs")
     assert_match "main", summary_output
   end
