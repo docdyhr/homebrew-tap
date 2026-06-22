@@ -4,8 +4,8 @@
 class MacwhisperMcpServer < Formula
   desc "Local MCP server exposing MacWhisper transcription to Claude Desktop"
   homepage "https://github.com/docdyhr/macwhisper-mcp-server"
-  url "https://files.pythonhosted.org/packages/b0/2e/b793700eee8f030021383b6e4d76dedd511b96fed28218b1564f2c36e47c/macwhisper_mcp_server-1.1.0.tar.gz"
-  sha256 "6cc41204b178a3647282c2e2a16214e5c141fd6d141ec966e4e6251ee5c86aa3"
+  url "https://files.pythonhosted.org/packages/6f/71/21f193351e74cd9d007a0c71390492bd7bc43b775a227856a8cf1ef5a9f6/macwhisper_mcp_server-1.1.1.tar.gz"
+  sha256 "116b0eb7aa86e677093cf839c3dab951181313f60bc182970047160e8fdcd3fa"
   license "MIT"
 
   depends_on "python@3.13"
