@@ -3,8 +3,8 @@ class Macversiontracker < Formula
 
   desc "CLI tool for tracking macOS apps installed outside the App Store"
   homepage "https://github.com/docdyhr/versiontracker"
-  url "https://github.com/docdyhr/versiontracker/archive/refs/tags/v1.1.0.tar.gz"
-  sha256 "73f8bf4c5393f2d900a93e18751f09c1073322d25fd0f26fab9fa1133a66674d"
+  url "https://github.com/docdyhr/versiontracker/archive/refs/tags/v1.2.0.tar.gz"
+  sha256 "796256508023188f4931f16c215f95cf3e961878eabe965e61e9b9237edaebc2"
   license "MIT"
 
   depends_on "python@3.12"
