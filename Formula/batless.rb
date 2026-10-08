@@ -1,22 +1,22 @@
 class Batless < Formula
   desc "Fast, non-blocking code and text viewer inspired by bat"
   homepage "https://github.com/docdyhr/batless"
-  version "0.7.0"
+  version "0.7.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/docdyhr/batless/releases/download/v0.7.0/batless-aarch64-apple-darwin.tar.gz"
-      sha256 "9009007edfc7fdda553693b7453e0976ff8f6393fa7d9ab83b82747910244eed"
+      url "https://github.com/docdyhr/batless/releases/download/v0.7.1/batless-aarch64-apple-darwin.tar.gz"
+      sha256 "293b805e58ac5b601c50b111b598aec91209d3d336ef30a5e8fb103c4c83e86d"
     else
-      url "https://github.com/docdyhr/batless/releases/download/v0.7.0/batless-x86_64-apple-darwin.tar.gz"
-      sha256 "fa064abcaf346fdbd0027b1a7f1af09fe2ef43e3c9456e9811731ef1b1c0fc39"
+      url "https://github.com/docdyhr/batless/releases/download/v0.7.1/batless-x86_64-apple-darwin.tar.gz"
+      sha256 "e2d4c6c374d634f518f5db5a64075ea4151337bbc13fa30660758ad14678bf53"
     end
   end
 
   on_linux do
-    url "https://github.com/docdyhr/batless/releases/download/v0.7.0/batless-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "cca764e973dd8b6bf95adb03a31cc53c00942dcd86c3b0bb4c1ec5194cdc1bf1"
+    url "https://github.com/docdyhr/batless/releases/download/v0.7.1/batless-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "ff26d0f19ec18a50679a4ace171d8faef58d882209bf9fd86a9775ae2b16ea6b"
   end
 
   def install
