@@ -2,11 +2,11 @@ class Drop2md < Formula
   desc "macOS document-to-markdown converter with folder watching and LLM integration"
   homepage "https://github.com/docdyhr/drop2md"
   license "MIT"
-  version "1.0.0"
+  version "1.0.1"
 
   on_arm do
     url "https://github.com/docdyhr/drop2md/releases/download/v#{version}/drop2md-#{version}-arm64.dmg"
-    sha256 "65d94ba0a645a5e816e0b03fef4636a31771b14454943fc17e916f1104e3da97"
+    sha256 "19361700916969e870c611e98e87ab625860042e59dc7478040dd2e6c3c3130a"
   end
 
   on_intel do
