@@ -2,17 +2,20 @@ class Drop2md < Formula
   desc "macOS document-to-markdown converter with folder watching and LLM integration"
   homepage "https://github.com/docdyhr/drop2md"
   license "MIT"
-  version "1.0.1"
+  version "2.0.0"
 
   on_arm do
     url "https://github.com/docdyhr/drop2md/releases/download/v#{version}/drop2md-#{version}-arm64.dmg"
-    sha256 "19361700916969e870c611e98e87ab625860042e59dc7478040dd2e6c3c3130a"
+    sha256 "d32ddcaf01ecd01b7eae13fd003897707a4e97e537da4c0bb211fe3cb633ab3e"
   end
 
   on_intel do
     odie "drop2md pre-built binaries are Apple Silicon (arm64) only at this time. " \
          "Install from source: pip install 'drop2md[pdf-light,office,ocr]'"
   end
+
+  # The v2.0.0 bundle is built on macOS 15; its dylibs need macOS 15+
+  depends_on macos: :sequoia
 
   # tesseract is called as a subprocess by pytesseract — not bundled in the binary
   depends_on "tesseract"
